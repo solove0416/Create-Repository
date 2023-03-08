@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace _001_bmi
+namespace _002_bmi
 {
-  internal class Program
+  internal static class Program
   {
-    static void Main(string[] args)
+    /// <summary>
+    /// 해당 애플리케이션의 주 진입점입니다.
+    /// </summary>
+    [STAThread]
+    static void Main()
     {
-      Console.Write("키(cm): ");
-      double height = double.Parse(Console.ReadLine());
-
-      Console.Write("체중(kg): ");
-      double weight = double.Parse(Console.ReadLine());
-
-      double bmi = weight / (height / 100 * height / 100);
-      Console.WriteLine("BMI = " + bmi);
+      Application.EnableVisualStyles();
+      Application.SetCompatibleTextRenderingDefault(false);
+      Application.Run(new Form1());
     }
   }
 }
